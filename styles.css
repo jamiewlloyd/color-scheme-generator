@@ -1,9 +1,9 @@
 :root {
-   --color1: #fe7b6a;
-   --color2: #febe6a;
-   --color3: #d2fe6a;
-   --color4: #6ad9fe;
-   --color5: #ec92fc;
+   --color1: #FE7B6A;
+   --color2: #FEBE6A;
+   --color3: #D2FE6A;
+   --color4: #6AD9FE;
+   --color5: #EC92FC;
 }
 
 body {
@@ -63,6 +63,7 @@ header {
    display: grid;
    grid-template-columns: repeat(5, 1fr);
    justify-content: center;
+   cursor: pointer;
 }
 
 .color-block {

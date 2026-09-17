@@ -1,6 +1,7 @@
 const chosenColor = document.getElementById("color-input")
 const generateBtn = document.getElementById("generate")
 const schemeMode = document.getElementById("scheme-mode")
+const schemeContainer = document.getElementById("scheme-container")
 
 generateBtn.addEventListener("click", () => {
    const requestColor = chosenColor.value.replace("#", "")
@@ -12,9 +13,16 @@ generateBtn.addEventListener("click", () => {
          data.colors.forEach((color, index) => {
             const currentNumber = index + 1
             const currentColor = color.hex.value
+            const hexElement = document.getElementById(`hex${currentNumber}`)
             document.documentElement.style.setProperty(`--color${currentNumber}`, `${currentColor}`)
-            document.getElementById(`hex${currentNumber}`).innerText = currentColor
+            hexElement.innerText = currentColor
+            hexElement.parentElement.dataset.color = currentColor
          });
 
       })
+})
+
+schemeContainer.addEventListener("click", (e) => {
+   const copyText = e.target.parentElement.dataset.color
+   navigator.clipboard.writeText(copyText);
 })
