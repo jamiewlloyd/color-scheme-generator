@@ -3,5 +3,104 @@
    --color2: #febe6a;
    --color3: #d2fe6a;
    --color4: #6ad9fe;
-   --color5: #fe6af2;
+   --color5: #ec92fc;
+}
+
+body {
+   margin: 0;
+   font-family: "Inter", sans-serif;
+}
+
+.main-wrapper {
+   max-width: 900px;
+   max-height: 700px;
+   margin: auto auto;
+}
+
+header {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 150px;
+}
+
+.inputs {
+   display: flex;
+   gap: 12px;
+   height: 40px;
+   padding: 25px 0;
+   margin: 0 15px;
+}
+
+.input {
+   background-color: white;
+   border: 1px solid #d1d5db;
+   border-radius: 6px;
+   cursor: pointer;
+}
+
+#color-input {
+   width: 60px;
+   height: 40px;
+}
+
+#scheme-mode {
+   width: 292px;
+   height: 40px;
+   font-size: 16px;
+   padding: 0 10px;
+}
+
+#generate {
+   width: 123px;
+   height: 40px;
+   font-size: 12px;
+}
+
+.scheme-container {
+   min-width: 650px;
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   justify-content: center;
+}
+
+.color-block {
+   min-height: 400px;
+   min-width: 100px;
+}
+
+.color-1 {
+   background-color: var(--color1);
+}
+
+.color-2 {
+   background-color: var(--color2);
+}
+
+.color-3 {
+   background-color: var(--color3);
+}
+
+.color-4 {
+   background-color: var(--color4);
+}
+
+.color-5 {
+   background-color: var(--color5);
+}
+
+span {
+   display: inline-block;
+   width: 33px;
+   text-align: center;
+}
+
+h2 {
+   width: 100%;
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 16px;
+   font-weight: 700;
+   letter-spacing: 0.8px;
 }
