@@ -8,5 +8,13 @@ generateBtn.addEventListener("click", () => {
 
    fetch(`https://www.thecolorapi.com/scheme?hex=${requestColor}&mode=${selectedMode}&count=5`)
       .then(response => response.json())
-      .then(data => console.log(data.colors[0].hex.value))
+      .then(data => {
+         data.colors.forEach((color, index) => {
+            const currentNumber = index + 1
+            const currentColor = color.hex.value
+            document.documentElement.style.setProperty(`--color${currentNumber}`, `${currentColor}`)
+            document.getElementById(`hex${currentNumber}`).innerText = currentColor
+         });
+
+      })
 })

@@ -46,16 +46,16 @@ header {
 }
 
 #scheme-mode {
-   width: 292px;
+   width: 285px;
    height: 40px;
    font-size: 16px;
    padding: 0 10px;
 }
 
 #generate {
-   width: 123px;
+   width: 135px;
    height: 40px;
-   font-size: 12px;
+   font-size: 14px;
 }
 
 .scheme-container {
